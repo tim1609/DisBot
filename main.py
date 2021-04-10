@@ -4,8 +4,8 @@ import random
 
 
 with open("TokenDisbot.txt", "r") as tf:
-    TOKEN = tf.readline()
-
+    TOKEN_LIST = tf.readlines()
+TOKEN = ''.join(map(str.strip,TOKEN_LIST))
 Bot = commands.Bot(command_prefix="!!")
 
 @Bot.event
